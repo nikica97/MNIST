@@ -44,7 +44,7 @@ def main():
     model.add(10, activation='softmax')
 
     # Here, additional hyperparameters required for the learning process are given to the neural network.
-    model.init_optimizer('RMSprop', learning_rate=0.1, beta=0.99)  # rekord 3e-1
+    model.init_optimizer('RMSprop', learning_rate=0.1, beta=0.99)
     model.init_regularizer('l2', 1e-3)
     model.set_loss('cross_entropy')
     model.set_metric('accuracy')
