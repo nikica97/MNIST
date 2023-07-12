@@ -68,7 +68,7 @@ def main():
         if not acc:
             show_sample(X_val[i], title='Real value: {}, predicted value: {}'.format(y_val[i], np.argmax(y_pred[i])))
 
-    # Generate predictions for test data (submission achieved kaggle score: 0.98225)
+    # Generate predictions for test data (submission achieved kaggle score: 0.98375)
     y_pred = model.predict(X_test)
     df_output = pd.DataFrame(np.argmax(y_pred, axis=1), columns=['Label'])
     df_output.insert(loc=0, column='ImageId', value=np.arange(len(y_pred)) + 1)
