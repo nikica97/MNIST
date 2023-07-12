@@ -7,12 +7,12 @@ class SequentialModel:
     Vectorized using the NumPy library for faster execution."""
 
     def __init__(self):
-        self.W = []
-        self.b = []
-        self.s_dw = []  # for RMSProp optimizer
-        self.s_db = []  # for RMSProp optimizer
+        self.W = []  # Weights
+        self.b = []  # Biases
+        self.s_dw = []  # RMSProp
+        self.s_db = []  # RMSProp
         self.activations = []
-        self.learning_rate = None
+        self.learning_rate = None  # RMSProp
         self.loss_function = None
         self.metric = None
         self.alpha = None  # regularization
