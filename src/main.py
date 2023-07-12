@@ -9,8 +9,8 @@ def main():
     test_data = pd.read_csv("../data/test.csv")
 
     # Split data to train and validation data
-    train_data = train_val_data[:350]  # train_data = train_val_data[:42000] for final training
-    val_data = train_val_data[350:420]
+    train_data = train_val_data[:35000]  # train_data = train_val_data[:42000] for final training
+    val_data = train_val_data[35000:42000]
 
     # Split data to inputs X (images) and outputs y (labels)
     X_train_orig = np.array(train_data.drop(columns=['label']))
